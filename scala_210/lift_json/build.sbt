@@ -1,6 +1,6 @@
-name := "Lift 2.5 starter template"
+name := "Lift 2.6 starter template"
 
-version := "0.0.1"
+version := "0.0.2"
 
 organization := "net.liftweb"
 
@@ -13,7 +13,7 @@ resolvers ++= Seq("snapshots"     at "http://oss.sonatype.org/content/repositori
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
 libraryDependencies ++= {
-  val liftVersion = "2.5"
+  val liftVersion = "2.6-SNAPSHOT"
   Seq(
     "net.liftweb"       %% "lift-json"          % liftVersion % "compile",
     "ch.qos.logback"    % "logback-classic"     % "1.0.6",

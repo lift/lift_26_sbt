@@ -1,4 +1,4 @@
-#Lift version 2.5 templates
+#Lift version 2.6 templates
 
 This repository contains templates for Lift projects.
 
@@ -17,8 +17,8 @@ Most people will want to start with the `lift_basic` template. This template sho
 
 At your terminal, enter:
 
-1. `git clone https://github.com/lift/lift_25_sbt.git`
-2. `cd lift_25_sbt/scala_29/lift_basic`
+1. `git clone https://github.com/lift/lift_26_sbt.git`
+2. `cd lift_26_sbt/scala_210/lift_basic`
 3. `./sbt`
        
        SBT will download a lot of stuff and after some time, you will see the sbt prompt `>`
@@ -36,7 +36,7 @@ Now that you have your first Lift application running, you may want to look arou
 You can use any IDE you want, even a text editor, but one of the best IDE for Scala is IntelliJ IDEA with the scala plugin. We'll assume you already got that installed. If you need help, this is the [plugin page](http://confluence.jetbrains.net/display/SCA/Scala+Plugin+for+IntelliJ+IDEA)
  
 1. Open Intellij, click on `File` -> `Open Project`
-2. Navigate to the folder `lift_25_sbt/scala_29/lift_basic` and click open.
+2. Navigate to the folder `lift_26_sbt/scala_210/lift_basic` and click open.
 
        Because we run the `gen-idea` command in the previous section, **sbt** already created the files Intellij needs to understand a new project.
        You can now navigate through the different files, and make changes as you wish. To see those changes take effect, you go back to `sbt` and restart `jetty` by doing `;container:stop;container:start`
