@@ -99,6 +99,7 @@ body { padding-top: 70px; }
 /*end bootstrap theme*/
 
 /*Lift stuff*/
+
 #lift__noticesContainer___notice ul, 
 #lift__noticesContainer___notice ul, 
 #lift__noticesContainer___error ul
@@ -125,6 +126,7 @@ body { padding-top: 70px; }
     color: #B94A48;
 }
 
+
 /**/
 .alt {
     color: #666666;
@@ -132,3 +134,4 @@ body { padding-top: 70px; }
     font-style: italic;
     font-weight: normal;
 }
+
