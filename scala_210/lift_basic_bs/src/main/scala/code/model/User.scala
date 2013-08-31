@@ -8,7 +8,7 @@ import net.liftweb.sitemap._
 import net.liftweb.sitemap.Loc._
 import net.liftweb.http._
 import net.liftweb.http.SHtml._
-//import scala.xml.{NodeSeq, Node, Text, Elem}
+
 
 /**
  * The singleton that has methods for accessing the database
