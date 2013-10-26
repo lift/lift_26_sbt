@@ -1,6 +1,6 @@
 name := "Lift 2.6 starter template with Bootstrap 3"
 
-version := "0.0.2"
+version := "0.0.3"
 
 organization := "net.liftweb"
 
@@ -18,7 +18,7 @@ unmanagedResourceDirectories in Test <+= (baseDirectory) { _ / "src/main/webapp"
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
 libraryDependencies ++= {
-  val liftVersion = "2.6-SNAPSHOT"
+  val liftVersion = "2.6-M1"
   Seq(
     "net.liftweb"       %% "lift-webkit"        % liftVersion        % "compile",
     "net.liftweb"       %% "lift-mapper"        % liftVersion        % "compile",
