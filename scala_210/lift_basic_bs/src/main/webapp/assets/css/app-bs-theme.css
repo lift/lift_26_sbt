@@ -61,6 +61,25 @@ body { padding-top: 70px; }
     color: #99CCCC;
 }
 
+
+.navbar-default .navbar-nav > .dropdown > a:hover .caret, 
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-bottom-color: #fff;
+    border-top-color: #fff;
+}
+
+.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-bottom-color: #fff;
+    border-top-color: #fff;
+}
+
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-bottom-color: #99CCCC; 
+    border-top-color: #99CCCC; 
+}
+
 .dropdown-menu {
     background-color: #006699;
 }
@@ -68,6 +87,12 @@ body { padding-top: 70px; }
 .dropdown-menu > li > a {
     color: #99CCCC;
 }
+
+.navbar-default .navbar-nav > li > a:focus {
+    background-color: rgba(0, 0, 0, 0);
+    color: #99CCCC;
+}	
+
 
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
     background-image: linear-gradient(to bottom, #003366 0%, #006699 100%);
@@ -96,12 +121,37 @@ body { padding-top: 70px; }
     color: #fff;
 }
 
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #99CCCC;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+    background-color: #357EBD;   
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #003C6F;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #cccccc;
+    background-color: transparent;
+  }
+
+}
+
 /*end bootstrap theme*/
 
 /*Lift stuff*/
 
 #lift__noticesContainer___notice ul, 
-#lift__noticesContainer___notice ul, 
+#lift__noticesContainer___warning ul, 
 #lift__noticesContainer___error ul
 {
     list-style-type: none;
@@ -127,7 +177,6 @@ body { padding-top: 70px; }
 }
 
 
-/**/
 .alt {
     color: #666666;
     font-family: "Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",Georgia,serif;

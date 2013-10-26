@@ -11,27 +11,47 @@
    <res name="Bootstrap3" lang="en" default="true"><span class="glyphicon glyphicon-book"></span> Bootstrap 3</res> 
    <res name="Bootstrap3" lang="sv"><span class="glyphicon glyphicon-book"></span> Bootstrap 3</res> 
 
-   <!-- FoBo BootstrapMegaMetaProtoUser overrides -->
+   <!-- FoBo BootstrapMegaMetaProtoUser overrides. All fobo.xxx resource values has a corresponding Lift i18n value  -->
+   <!-- you can therefore either remove a value to get the default Lift i18n value or set a blank value to make it render empty -->
+   <!-- For a complete list of all FoBo resource key's see FoBo documentation-->
    <!-- menu locs -->
-   <res name="fobo.sign.up" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Sign Up</res> 
-   <res name="fobo.sign.up" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Registrera dig</res> 
-   <res name="fobo.lost.password" lang="en" default="true"><span class="glyphicon glyphicon-envelope"></span> Lost Password</res> 
-   <res name="fobo.lost.password" lang="sv"><span class="glyphicon glyphicon-envelope"></span> Glömt Lösenord</res> 
-   <res name="fobo.login" lang="en" default="true"><span class="glyphicon glyphicon-user"></span> Login</res> 
-   <res name="fobo.login" lang="sv"><span class="glyphicon glyphicon-user"></span> Inloggning</res> 
-   <res name="fobo.logout" lang="en" default="true"><span class="glyphicon glyphicon-user"></span> Logout</res> 
-   <res name="fobo.logout" lang="sv"><span class="glyphicon glyphicon-user"></span> Logga Ut</res> 
-   <res name="fobo.reset.password" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Reset Password</res> 
-   <res name="fobo.reset.password" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Återställ lösenord</res> 
-   <res name="fobo.edit.user" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Edit User</res> 
-   <res name="fobo.edit.user" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Redigera användare</res> 
-   <res name="fobo.change.password" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Change Password</res> 
-   <res name="fobo.change.password" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Byt Lösenord</res> 
+   <res name="fobo.menu.loc.sign.up" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Sign Up</res> 
+   <res name="fobo.menu.loc.sign.up" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Registrera dig</res>   
+   <res name="fobo.menu.loc.lost.password" lang="en" default="true"><span class="glyphicon glyphicon-envelope"></span> Lost Password</res> 
+   <res name="fobo.menu.loc.lost.password" lang="sv"><span class="glyphicon glyphicon-envelope"></span> Glömt Lösenord</res> 
+   <res name="fobo.menu.loc.login" lang="en" default="true"><span class="glyphicon glyphicon-user"></span> Login</res> 
+   <res name="fobo.menu.loc.login" lang="sv"><span class="glyphicon glyphicon-user"></span> Inloggning</res> 
+   <res name="fobo.menu.loc.logout" lang="en" default="true"><span class="glyphicon glyphicon-user"></span> Logout</res> 
+   <res name="fobo.menu.loc.logout" lang="sv"><span class="glyphicon glyphicon-user"></span> Logga Ut</res> 
+   <res name="fobo.menu.loc.reset.password" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Reset Password</res> 
+   <res name="fobo.menu.loc.reset.password" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Återställ lösenord</res> 
+   <res name="fobo.menu.loc.edit.user" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Edit User</res> 
+   <res name="fobo.menu.loc.edit.user" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Redigera användare</res> 
+   <res name="fobo.menu.loc.change.password" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Change Password</res> 
+   <res name="fobo.menu.loc.change.password" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Byt Lösenord</res> 
+   
    <!-- buttons -->
-   <res name="fobo.send.it.submit" lang="en" default="true"><span class="glyphicon glyphicon-envelope"></span> Send it</res> 
-   <res name="fobo.send.it.submit" lang="sv"><span class="glyphicon glyphicon-envelope"></span> Skicka</res> 
-   <res name="fobo.log.in.submit" lang="en" default="true"><span class="glyphicon glyphicon-user"></span> Log in</res> 
-   <res name="fobo.log.in.submit" lang="sv"><span class="glyphicon glyphicon-user"></span> Logga In</res>    
+   <res name="fobo.submit.send.it" lang="en" default="true"><span class="glyphicon glyphicon-envelope"></span> Send it</res> 
+   <res name="fobo.submit.send.it" lang="sv"><span class="glyphicon glyphicon-envelope"></span> Skicka</res> 
+   <res name="fobo.submit.log.in" lang="en" default="true"><span class="glyphicon glyphicon-user"></span> Log in</res> 
+   <res name="fobo.submit.log.in" lang="sv"><span class="glyphicon glyphicon-user"></span> Logga In</res>    
+   <res name="fobo.submit.password.change" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Change Password</res> 
+   <res name="fobo.submit.password.change" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Byt Lösenord</res>    
+   <res name="fobo.submit.sign.up" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Sign up</res> 
+   <res name="fobo.submit.sign.up" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Registera</res> 
+   <res name="fobo.submit.edit.save" lang="en" default="true"><span class="glyphicon glyphicon-pencil"></span> Save</res> 
+   <res name="fobo.submit.edit.save" lang="sv"><span class="glyphicon glyphicon-pencil"></span> Spara</res>    
+   
+   <!-- notice, fields, legends and label -->
+   <res name="fobo.label.singn.up.password" lang="en" default="true">Password</res> 
+   <res name="fobo.label.singn.up.password" lang="sv">Lösenord</res> 
+   <res name="fobo.label.singn.up.repeat.password" lang="en" default="true">Password (repeat)</res> 
+   <res name="fobo.label.singn.up.repeat.password" lang="sv">Upprepa lösenord</res>   
+   <res name="fobo.placeholder.singn.up.password" lang="en" default="true">Password</res> 
+   <res name="fobo.placeholder.singn.up.password" lang="sv">Lösenord</res> 
+   <res name="fobo.placeholder.singn.up.repeat.password" lang="en" default="true">Password (repeat)</res> 
+   <res name="fobo.placeholder.singn.up.repeat.password" lang="sv">Upprepa lösenord</res>      
+
    <!-- End FoBo BootstrapMegaMetaProtoUser overrides -->
                
    <res name="UserDDLabel" lang="en" default="true"><span class="glyphicon glyphicon-user"></span> User</res> 
