@@ -48,8 +48,8 @@ class Boot {
 
     //Init the FoBo - Front-End Toolkit module, 
     //see http://liftweb.net/lift_modules for more info
-    FoBo.InitParam.JQuery=FoBo.JQuery191  
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap300 
+    FoBo.InitParam.JQuery=FoBo.JQuery1102  
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap301 
     FoBo.init() 
     
     //Show the spinny image when an Ajax call starts
@@ -89,7 +89,7 @@ class Boot {
     val home       = Menu.i("Home") / "index" 
     val userMenu   = User.AddUserMenusHere
     val static     = Menu(Loc("Static", Link(List("static"), true, "/static/index"), S.loc("StaticContent" , scala.xml.Text("Static Content")),LocGroup("lg2","topRight")))
-    val twbs       = Menu(Loc("Bootstrap3", Link(List("bootstrap3"), true, "/bootstrap3/index"), S.loc("Bootstrap3" , scala.xml.Text("Bootstrap3")),LocGroup("lg2")))
+    val twbs       = Menu(Loc("Bootstrap3", Link(List("bootstrap301"), true, "/bootstrap301/index"), S.loc("Bootstrap3" , scala.xml.Text("Bootstrap3")),LocGroup("lg2")))
      
     def sitemap = SiteMap(
         home          >> LocGroup("lg1"),

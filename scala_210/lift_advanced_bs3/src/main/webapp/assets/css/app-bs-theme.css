@@ -42,6 +42,7 @@ body { padding-top: 70px; }
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover {
+  background-image: linear-gradient(to bottom, #003C66 0%, #003C61 100%);
   color: #fff;
   background-color: #003C6F;
 }
@@ -83,9 +84,21 @@ body { padding-top: 70px; }
 .dropdown-menu {
     background-color: #006699;
 }
-
 .dropdown-menu > li > a {
     color: #99CCCC;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #357EBD;
+    background-image: linear-gradient(to bottom, #428BCA 0%, #357EBD 100%);
+    background-repeat: repeat-x;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: #357EBD;
+    background-image: linear-gradient(to bottom, #428BCA 0%, #357EBD 100%);
+    background-repeat: repeat-x;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a:focus {
@@ -99,6 +112,10 @@ body { padding-top: 70px; }
     background-repeat: repeat-x;
     border-color: #3278B3;
     text-shadow: 0 -1px 0 #3071A9;
+}
+a.list-group-item:hover, a.list-group-item:focus {
+    background-color: #F5F5F5;
+    text-decoration: none;
 }
 
 .table-striped tbody > tr:nth-child(2n) > td, .table-striped tbody > tr:nth-child(2n) > th {
