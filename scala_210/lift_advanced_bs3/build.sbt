@@ -1,4 +1,4 @@
-name := "Lift 2.6 starter template with Bootstrap 3"
+name := "Lift v2.6 Template Application with Bootstrap v3"
 
 version := "0.0.3"
 
