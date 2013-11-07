@@ -6,14 +6,14 @@ import Helpers._
 
 import common._
 import http._
-import js.jquery.JQueryArtifacts
 import sitemap._
 import Loc._
 import mapper._
 
 import code.model._
-import net.liftmodules.{FoBo}
+import net.liftmodules.FoBo
 
+import scala.language.postfixOps
 
 /**
  * A class that's instantiated early and run.  It allows the application

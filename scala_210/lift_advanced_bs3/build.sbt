@@ -15,7 +15,7 @@ seq(com.github.siasia.WebPlugin.webSettings :_*)
 
 unmanagedResourceDirectories in Test <+= (baseDirectory) { _ / "src/main/webapp" }
 
-scalacOptions ++= Seq("-deprecation", "-unchecked")
+scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
 
 libraryDependencies ++= {
   val liftVersion = "2.6-M1"
