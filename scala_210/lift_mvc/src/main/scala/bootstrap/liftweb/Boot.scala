@@ -40,7 +40,7 @@ class Boot {
       new Html5Properties(r.userAgent))
 
     //Init the jQuery module, see http://liftweb.net/jquery for more information.
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery191
     JQueryModule.init()
   }
 }

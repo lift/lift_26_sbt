@@ -1,5 +1,8 @@
 #This folder contains multiple Lift project templates:
 
+- lift_advanced_bs3 is a more advanced template that shows Bootstrap 3 integration.
+             It uses the Fobo Lift module to provide the integration.
+
 - lift_basic is a basic Lift application with a built-in user class
              and nice use of Blueprint CSS and HTML5
 
