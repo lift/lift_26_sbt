@@ -20,11 +20,12 @@ object User extends User with MetaMegaProtoUser[User] with BootstrapMegaMetaProt
   override def fieldOrder = List(id, firstName, lastName, email,
   locale, timezone, password, textArea) 
   
-  // comment this line out to require email validations
+  //If you set this to false then comment out the validateUserMenuLoc override bellow
   override def skipEmailValidation = true
 
   //add a loc group to the user menu
   override def globalUserLocParams: List[LocParam[Unit]] = List(LocGroup("user"))
+  
   override def resetPasswordMenuLoc: Box[net.liftweb.sitemap.Menu] = Box(Empty) 
   override def validateUserMenuLoc: Box[net.liftweb.sitemap.Menu] = Box(Empty) 
  
