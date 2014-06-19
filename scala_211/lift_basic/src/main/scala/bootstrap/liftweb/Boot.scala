@@ -6,14 +6,14 @@ import Helpers._
 
 import common._
 import http._
+import js.jquery.JQueryArtifacts
 import sitemap._
 import Loc._
 import mapper._
 
 import code.model._
-import net.liftmodules.FoBo
+import net.liftmodules.JQueryModule
 
-import scala.language.postfixOps
 
 /**
  * A class that's instantiated early and run.  It allows the application
@@ -30,7 +30,7 @@ class Boot {
 
       LiftRules.unloadHooks.append(vendor.closeAllConnections_! _)
 
-      DB.defineConnectionManager(DefaultConnectionIdentifier, vendor)
+      DB.defineConnectionManager(util.DefaultConnectionIdentifier, vendor)
     }
 
     // Use Lift's Mapper ORM to populate the database
@@ -41,17 +41,26 @@ class Boot {
     // where to search snippet
     LiftRules.addToPackages("code")
 
+    // Build SiteMap
+    def sitemap = SiteMap(
+      Menu.i("Home") / "index" >> User.AddUserMenusAfter, // the simple way to declare a menu
+
+      // more complex because this menu allows anything in the
+      // /static path to be visible
+      Menu(Loc("Static", Link(List("static"), true, "/static/index"), 
+	       "Static Content")))
 
     def sitemapMutators = User.sitemapMutator
-    //The SiteMap is built in the Site object bellow 
-    LiftRules.setSiteMapFunc(() => sitemapMutators(Site.sitemap))
 
-    //Init the FoBo - Front-End Toolkit module, 
-    //see http://liftweb.net/lift_modules for more info
-    FoBo.InitParam.JQuery=FoBo.JQuery1102  
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap311 
-    FoBo.init() 
-    
+    // set the sitemap.  Note if you don't want access control for
+    // each page, just comment this line out.
+    LiftRules.setSiteMapFunc(() => sitemapMutators(sitemap))
+
+    //Init the jQuery module, see http://liftweb.net/jquery for more information.
+    LiftRules.jsArtifacts = JQueryArtifacts
+    JQueryModule.InitParam.JQuery=JQueryModule.JQuery191
+    JQueryModule.init()
+
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart =
       Full(() => LiftRules.jsArtifacts.show("ajax-loader").cmd)
@@ -69,36 +78,8 @@ class Boot {
     // Use HTML5 for rendering
     LiftRules.htmlProperties.default.set((r: Req) =>
       new Html5Properties(r.userAgent))    
-      
-    LiftRules.noticesAutoFadeOut.default.set( (notices: NoticeType.Value) => {
-        notices match {
-          case NoticeType.Notice => Full((8 seconds, 4 seconds))
-          case _ => Empty
-        }
-     }
-    ) 
-    
+
     // Make a transaction span the whole HTTP request
     S.addAround(DB.buildLoanWrapper)
   }
-  
-  object Site {
-    import scala.xml._
-    val divider1   = Menu("divider1") / "divider1"
-    val ddLabel1   = Menu.i("UserDDLabel") / "ddlabel1"
-    val home       = Menu.i("Home") / "index" 
-    val userMenu   = User.AddUserMenusHere
-    val static     = Menu(Loc("Static", Link(List("static"), true, "/static/index"), S.loc("StaticContent" , scala.xml.Text("Static Content")),LocGroup("lg2","topRight")))
-    val twbs       = Menu(Loc("Bootstrap3", Link(List("bootstrap301"), true, "/bootstrap301/index"), S.loc("Bootstrap3" , scala.xml.Text("Bootstrap3")),LocGroup("lg2")))
-     
-    def sitemap = SiteMap(
-        home          >> LocGroup("lg1"),
-        static,
-        twbs,
-        ddLabel1      >> LocGroup("topRight") >> PlaceHolder submenus (
-            divider1  >> FoBo.TBLocInfo.Divider >> userMenu
-            )
-         )
-  }
-  
 }
