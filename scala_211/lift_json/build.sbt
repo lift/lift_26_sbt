@@ -13,7 +13,7 @@ resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositor
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
 libraryDependencies ++= {
-  val liftVersion = "2.6"
+  val liftVersion = "2.6.1"
   Seq(
     "net.liftweb"       %% "lift-json"          % liftVersion % "compile",
     "ch.qos.logback"    % "logback-classic"     % "1.0.6",
