@@ -18,7 +18,7 @@ unmanagedResourceDirectories in Test <+= (baseDirectory) { _ / "src/main/webapp"
 scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
 
 libraryDependencies ++= {
-  val liftVersion = "2.6.1"
+  val liftVersion = "2.6.2"
   Seq(
     "net.liftweb"       %% "lift-webkit"        % liftVersion        % "compile",
     "net.liftweb"       %% "lift-mapper"        % liftVersion        % "compile",
