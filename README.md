@@ -7,7 +7,7 @@ This repository contains templates for Lift projects.
 
 These templates offer a starting point for your Lift-based project.
 
-If you want to start with Scala 2.11.1, use the templates in the scala_211 directory
+If you want to start with Scala 2.11.6, use the templates in the scala_211 directory
 
 ##Getting started.
 
@@ -28,7 +28,7 @@ At your terminal, enter:
 4. `gen-idea`
 
        This will download even more stuff, and it will generate files that Intellij IDEA can read. IntelliJ is one of several IDE's you can use.
-5. `container:start`
+5. `jetty:start`
 6. Your Lift application is now running at [127.0.0.1:8080](http://127.0.0.1:8080)
  
  
