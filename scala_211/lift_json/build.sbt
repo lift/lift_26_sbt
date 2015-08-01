@@ -15,9 +15,10 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 libraryDependencies ++= {
   val liftVersion = "2.6.2"
   Seq(
-    "net.liftweb"       %% "lift-json"          % liftVersion % "compile",
+    "net.liftweb"       %% "lift-json"          % liftVersion       % "compile",
     "ch.qos.logback"    % "logback-classic"     % "1.0.6",
-    "org.specs2"        %% "specs2"             % "2.3.12"      % "test"
+    "org.specs2"        %% "specs2-core"        % "3.6.4"           % "test"
   )
 }
 
+scalacOptions in Test ++= Seq("-Yrangepos")
