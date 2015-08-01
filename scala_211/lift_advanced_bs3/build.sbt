@@ -4,7 +4,7 @@ version := "0.0.5"
 
 organization := "net.liftweb"
 
-scalaVersion := "2.11.2"
+scalaVersion := "2.11.6"
 
 resolvers ++= Seq("snapshots"     at "https://oss.sonatype.org/content/repositories/snapshots",
                   "staging"       at "https://oss.sonatype.org/content/repositories/staging",
