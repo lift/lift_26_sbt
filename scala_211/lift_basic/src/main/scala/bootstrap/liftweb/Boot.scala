@@ -22,6 +22,7 @@ import net.liftmodules.JQueryModule
 class Boot {
   def boot {
     if (!DB.jndiJdbcConnAvailable_?) {
+      sys.props.put("h2.implicitRelativePath", "true")
       val vendor = 
 	new StandardDBVendor(Props.get("db.driver") openOr "org.h2.Driver",
 			     Props.get("db.url") openOr 

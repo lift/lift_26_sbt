@@ -1,29 +1,32 @@
 package code
 package snippet
 
-import net.liftweb._
-import http._
+import java.util.Date
+
+import net.liftweb.http._
 import net.liftweb.util._
 import net.liftweb.common._
 import Helpers._
 import lib._
 import org.specs2.mutable.Specification
-import org.specs2.specification.AroundExample
+import org.specs2.specification.AroundEach
 import org.specs2.execute.AsResult
+import org.specs2.execute.Result
 
 
-object HelloWorldTestSpecs extends Specification with AroundExample{
+object HelloWorldTestSpecs extends Specification with AroundEach {
   val session = new LiftSession("", randomString(20), Empty)
-  val stableTime = now
+  val stableTime: Date = (10 minutes) ago
+
 
   /**
    * For additional ways of writing tests,
    * please see http://www.assembla.com/spaces/liftweb/wiki/Mocking_HTTP_Requests
    */
-  def around[T : AsResult](body: =>T) = {
+  def around[T : AsResult](body: =>T): Result = {
     S.initIfUninitted(session) {
       DependencyFactory.time.doWith(stableTime) {
-        AsResult( body)  // execute t inside a http session
+        AsResult(body) // execute t inside a http session
       }
     }
   }
@@ -31,7 +34,6 @@ object HelloWorldTestSpecs extends Specification with AroundExample{
   "HelloWorld Snippet" should {
     "Put the time in the node" in {
       val hello = new HelloWorld
-      Thread.sleep(1000) // make sure the time changes
 
       val str = hello.howdy(<span>Welcome to your Lift app at <span id="time">Time goes here</span></span>).toString
 
