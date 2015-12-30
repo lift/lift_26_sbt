@@ -59,6 +59,7 @@ body { padding-top: 70px; }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
+	background-color: #003C6F;
     background-image: linear-gradient(to bottom, #003C6F 0%, #003C6F 100%);/*#003C6F;*/
     color: #99CCCC;
 }
