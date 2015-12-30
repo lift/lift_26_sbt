@@ -13,6 +13,7 @@ body { padding-top: 70px; }
 
 /* Main navigation */
 .navbar {
+	background-color: #006699;
     background-image: linear-gradient(to bottom, #003366 0%, #006699 100%);
 }
 
@@ -42,9 +43,9 @@ body { padding-top: 70px; }
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover {
+  background-color: #003C6F;
   background-image: linear-gradient(to bottom, #003C66 0%, #003C61 100%);
   color: #fff;
-  background-color: #003C6F;
 }
 .navbar-default .navbar-toggle {
   border-color: #563d7c;
@@ -60,7 +61,7 @@ body { padding-top: 70px; }
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
 	background-color: #003C6F;
-    background-image: linear-gradient(to bottom, #003C6F 0%, #003C6F 100%);/*#003C6F;*/
+    background-image: linear-gradient(to bottom, #003C6F 0%, #003C6F 100%);
     color: #99CCCC;
 }
 
